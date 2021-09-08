@@ -1,0 +1,38 @@
+---
+site_title: Поможем парку 300-летия
+---
+
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/normalize.css"/>
+         <link rel="stylesheet" href="/styles/base.css"/>
+        <title>{{ site_title }}</title>
+    </head>
+    <body>
+        <h1>{{ site_title }}</h1>
+        <aside class="index menu">
+		<nav class="open">
+			<a href="#problem">В чем пробема?</a>
+			<a href="#importance">Почему это важно?</a>
+			<a href="#history">История парка</a>
+			<a href="#news">Новости</a>
+			<a href="#action">Как помочь?</a>
+			<a href="#aftermath">Что будет если ничего не делать?</a>
+			<a href="#contacts">Контакты</a>
+            <button type="button" class="btn m-white m-close" onclick="$(this).parent().hide().next().show()">×</button>
+		</nav>
+		<nav onclick="$(this).hide().prev().show();">
+			<button class="vertical-word"><span> Оглавление</span></button>
+		</nav>
+	</aside>
+        <hr/>
+        {{ content | safe }}
+        <hr/>
+        <small>by
+            <a href="https://codingthesmartway.com">CodingTheSmartWay.com</a>
+        </small>
+    </body>
+</html>
