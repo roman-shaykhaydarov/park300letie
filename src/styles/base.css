@@ -95,6 +95,7 @@ header h1 {
   font-weight: bold;
   display: block;
   width: 100%;
+  text-shadow: #fff 0px 10px 55px;
 }
 
 h2 {
@@ -177,15 +178,16 @@ footer {
   text-align: center;
 }
 
-aside {
+aside.index {
   width: auto;
-  height: 400px;
+  height: 360px;
   background: rgba(0, 0, 0, 0.9);
   padding: 20px;
   position: fixed;
   top: 20%;
   z-index: 6;
   left: 0;
+  overflow: hidden;
 }
 aside nav {
   display: none;
@@ -193,22 +195,27 @@ aside nav {
 aside nav.open {
   display: block;
   width: 220px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 aside nav a {
   color: #fff;
   display: block;
-  margin: 25px 20px;
+  margin: 19px 20px;
+  text-decoration: none;
+}
+aside nav a:hover {
+  text-decoration: underline;
 }
 
 .vertical-word {
   width: 27px;
   color: #fff;
   word-break: break-all;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 35px;
+  font-weight: 600;
 }
 
 iframe {
