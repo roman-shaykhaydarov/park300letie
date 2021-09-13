@@ -2,7 +2,7 @@
 title: Главная страница
 layout: layout.njk
 ---
-
+{{events[0].color}}
 <section id="problem">
   <h2>В чем проблема?</h2>
   <ol class="list mb20">
@@ -186,369 +186,18 @@ layout: layout.njk
   </p>
   <div id="timeline">
     <ul class="timeline">
+    {% for event in events %}
       <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">1995</span>
+        <div class="tl-wrap {{event.class}}">
+          <time datetime={{event.date}} class="tl-date">{{event.date | truncate(4, true,"")}}</time>
           <div class="tl-content panel padder b-a">
             <span class="arrow left pull-up"></span>
-            <div>
-              А. Собчак подписал распоряжение о закладке "Парка 300-летия
-              Санкт-Петербурга"
+            <div>{{event.content}}
             </div>
           </div>
         </div>
       </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">1996</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Подготовлено задание на проектирование культурно-развлекательного
-              парка
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2003</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Официальное открытие "Парка 300-летия Санкт-Петербурга"</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2004</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>В. Матвиенко открыла "Безымянную высоту"</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2005</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Начато строительство аквапарка и ТРЦ "PiterLand"</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2006</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Возникает проект МФК "Lotos Tower" (100 метровое здание отеля)
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2007</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Построен самый крупный открытый(на тот момент) скейтпарк в
-              Санкт-Петербурга
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2008</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Постройка "PiterLand" заморожена на 2 года из-за просрочки платежа
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2009</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Градостроительный совет: территории парка 300-летия официально
-              отдаются под застройку
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2010</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Территории восточнее и западнее существующих границ парка
-              исключены из ЗНОП
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2011</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Центр водного туризима через суд получает разрешение на
-              строительство отеля
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2012</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Г. Полтавченко предложил расширить парк вдоль набережной Большой
-              Невки
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2012</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              В парке поставили памятник Франсиско Миранде (дар венесуэльского
-              лидера У. Чавеса)
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2012</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Правительством города отозвано разрешение на строительство РОО
-              Хокейный клуб СКА
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2012</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Открыт аквапарк и ТРК "Питерлэнд"</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2014</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Запущены 2 фонтана на восточном и западном лучах</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2014</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Реновация скейт-парка силами местных жителей и с привлечением
-              инвестора
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2014</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              МФК Lotos Tower вместо 150-метровой башни преобразовался в
-              7-этажный апарт-отель
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2015</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Активизировались строительные работы на площадке Академии боевых
-              искусств
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2015</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Активизировалась строительные работы на площадке гостиницы Центра
-              водного туризма
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2015</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Внесение поправок в Генплан города, но поправки о возвращении 4 Га
-              не были приняты
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2015</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Организована незаконная стоянка у ЖК "Золотая Гавань"</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2015</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Незаконная вырубка кустарника в восточной части</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Публичные слушания закона о ПЗЗ, на которых местные жители внесли
-              замечания
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Состоялся согласованный митинг в защиту парка 300-летия</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Произведена высадка рябиновой аллее семьи, любви и верности
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Жители района установили скамью примирения на аллее семьи, любви и
-              верности
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Жители вышли на большой покос травы на спорном участке парка
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>Прошла акция "Посади дерево" - высажена рябиновая аллея</div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Смольный передал «Газпрому» 3 га бывшей территории парка 300-летия
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2016</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Смольный передал «Газпрому» 3 га бывшей территории парка 300-летия
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2020</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              Мария Шишкина потребовала требованием отменить коммерческую
-              застройку рядом с парком
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-wrap {{class}}">
-          <span class="tl-date">2020</span>
-          <div class="tl-content panel padder b-a">
-            <span class="arrow left pull-up"></span>
-            <div>
-              УФАС предупредил Смольный о необходимости забрать у «Плаза Лотос
-              Групп»
-            </div>
-          </div>
-        </div>
-      </li>
+    {% endfor %}
     </ul>
   </div>
   <p>Дополнительные ресурсы по теме:</p>
@@ -1106,40 +755,25 @@ layout: layout.njk
   <h3 class="mb20 mt40">
     Поддержите петиции жителей Приморского района на сайте change.org:
   </h3>
-  <div class="mb20">
-    <a
-      href="https://www.change.org/p/%D1%82%D1%80%D0%B5%D0%B1%D1%83%D0%B5%D0%BC-%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B0%D1%80%D0%BA%D0%B0-300-%D0%BB%D0%B5%D1%82%D0%B8%D1%8F-%D1%81%D0%B0%D0%BD%D0%BA%D1%82-%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B0"
-      target="_blank"
-      ><img
-        class="va-middle changeorg-icon"
-        width="48"
-        style="margin-right: 20px"
-        src="images/changeorg_64.png"
-    /></a>
-    <a
-      class="changeorg-link"
-      href="https://www.change.org/p/%D1%82%D1%80%D0%B5%D0%B1%D1%83%D0%B5%D0%BC-%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B0%D1%80%D0%BA%D0%B0-300-%D0%BB%D0%B5%D1%82%D0%B8%D1%8F-%D1%81%D0%B0%D0%BD%D0%BA%D1%82-%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B0"
-      target="_blank"
-      >Требуем законодательно остановить уничтожение Парка 300-летия
-      Санкт-Петербурга!</a
-    >
-  </div>
-  <div class="mb20 mt20">
-    <a href="https://www.change.org/p/metodikaznop" target="_blank"
-      ><img
-        class="va-middle changeorg-icon"
-        width="48"
-        style="margin-right: 20px"
-        src="images/changeorg_64.png"
-    /></a>
-    <a
-      class="changeorg-link"
-      href="https://www.change.org/p/metodikaznop"
-      target="_blank"
-      >Требуем изменить методику расчёта "показателя обеспеченности" зелеными
-      насаждениями</a
-    >
-  </div>
+   {% for petition in petitions %}
+      <div class="mb20">
+        <a
+          href={{petition.link}}
+          target="_blank"
+          ><img
+            class="va-middle changeorg-icon"
+            width="48"
+            style="margin-right: 20px"
+            src="images/changeorg_64.png"
+        /></a>
+        <a
+          class="changeorg-link"
+          href={{petition.link}}
+          target="_blank"
+          >{{petition.name}}</a
+        >
+      </div>
+    {% endfor %}
   <h3 class="mb20 mt40">Отправьте обращение в следующие инстанции:</h3>
 
   <div id="tabs-container2">
